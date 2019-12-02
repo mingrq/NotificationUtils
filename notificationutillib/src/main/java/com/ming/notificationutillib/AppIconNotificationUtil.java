@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.ContextWrapper;
 
 /**
- * App图标通知工具
+ * App角标通知工具
  */
 public class AppIconNotificationUtil extends ContextWrapper {
     public AppIconNotificationUtil(Context base) {
