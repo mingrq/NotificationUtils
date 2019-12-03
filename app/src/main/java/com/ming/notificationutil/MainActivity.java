@@ -2,6 +2,7 @@ package com.ming.notificationutil;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         simpleNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                statusBarNotificationUtil.sendSimpleNotification(i[0],"asdfsda","sdfas",R.mipmap.ic_launcher);
+                Intent intent = new Intent(MainActivity.this,TestActivity.class);
+                statusBarNotificationUtil.setNotificationPriority(StatusBarNotificationUtil.PriorityEnum.MIN);
+                statusBarNotificationUtil.sendSimpleNotification(i[0],i[0]+"dsfsd","sdfas",R.mipmap.ic_launcher,intent);
                 i[0]++;
             }
         });
